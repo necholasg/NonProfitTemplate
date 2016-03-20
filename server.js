@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var s3 = require('s3');
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 5000;
 var morgan = require('morgan');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
@@ -37,5 +37,5 @@ var routes_setter = require('./server/config/routes.js');
 routes_setter(app, client);
 
 app.listen(port, function(){
-  console.log('listening on port 8000');
+  console.log('listening on port 5000');
 });
