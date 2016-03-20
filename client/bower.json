@@ -1,0 +1,28 @@
+{
+  "name": "Necholas Gomez",
+  "authors": [
+    "Necholas Gomez <necholas.gomez@gmail.com>"
+  ],
+  "description": "Non-profitTemplate",
+  "main": "server.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular-bootstrap": "^1.1.2",
+    "angular-file-upload": "^2.2.0",
+    "angular-scroll": "^1.0.0",
+    "angulargrid": "^0.5.3",
+    "jquery": "1.9.1 - 2",
+    "bootstrap": ">=3.3.2",
+    "ui-navbar": "^0.4.3"
+  }
+}

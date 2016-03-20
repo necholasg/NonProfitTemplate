@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Non-Profit</title>
+    <!-- ANGULARS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- Bootstrap latest css-->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src='/app.js'></script>
+    <script src='./angular/factories/storageFactory.js'></script>
+    <script src='./angular/factories/picsFactory.js'></script>
+    <script src='./angular/factories/authFactory.js'></script>
+    <script src='./angular/controllers/authCtrl.js'></script>
+    <script src='./angular/controllers/mainController.js'></script>
+    <script src='./angular/controllers/pageController.js'></script>
+    <script src='./static/js/full_page.js'></script>
+    <link rel="stylesheet" href="./static/css/main.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./static/css/full_page_scroll.css" media="screen" charset="utf-8">
+    <script src="./bower_components/angulargrid/angulargrid.js"></script>
+    <script src="./bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="./bower_components/angular-file-upload/dist/angular-file-upload.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class='container-fluid' ui-view="">
+      </div>
+    </div>
+  </body>
+</html>

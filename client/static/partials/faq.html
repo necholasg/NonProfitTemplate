@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="./static/css/page.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <div class="container-fluid mainContent" ng-controller="pageController">
+
+      <nav class="navbar navbar-fixed-top" style="background-color: #0F528C;">
+
+        <ul class="nav navbar-nav">
+          <li><a href="#/">Home</a></li>
+          <li uib-dropdown="">
+            <a href="#" uib-dropdown-toggle="">About Us<b class="caret"></b></a>
+            <tree tree="tree"></tree>
+          </li>
+
+          <li>
+            <form action="" method="post">
+              <button type="submit" class="donateBtn btn btn-danger" name="button"><i class="fa fa-heart"></i> DONATE</button>
+            </form>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class='center heading'>Frequently Asked Questions</h1>
+          <div class="line"></div>
+        </div>
+        <div class="center col-md-8 col-md-offset-2">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

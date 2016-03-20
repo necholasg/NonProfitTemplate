@@ -1,0 +1,28 @@
+body{
+  background-color: #D7E3F0;
+}
+.mainContent{
+  padding-top: 50px;
+  margin-top: 50px;
+  height: 100%;
+}
+.main p{
+  font-size: 18px;
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.proj img{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 50%;
+  height: 50%;
+}
+
+p{
+  margin-bottom: 15px;
+}

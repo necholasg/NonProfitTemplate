@@ -1,0 +1,24 @@
+{
+  "name": "NonProfit",
+  "version": "1.0.0",
+  "description": "template made from NonProfit",
+  "main": "server.js",
+  "author": "NecholasGomez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "^5.7.0",
+    "moment": "^2.11.2",
+    "mongoose": "^4.4.2",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "s3": "^4.4.0"
+  }
+}

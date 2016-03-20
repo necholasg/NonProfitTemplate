@@ -1,0 +1,18 @@
+[fullpage-scroll='top']{
+	background-image: url('http://ndchicago.org/wp-content/uploads/2015/10/NFP-image_logo.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position:fixed;
+	top:70px;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:-1;
+}
+
+[fullpage-scroll='noscroll']{
+}
+
+[fullpage-scroll='scroll']{
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    </style>
+  </head>
+  <body>
+    <div scroll-hide ng-controller='mainController'>
+
+
+      <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #0F528C;" ng-hide=''>
+
+        <div class="navbar-header">
+          <h2 class="pull-left navbar-toggle" style="color: white;" ng-init="navCollapsed = true">My Non Profit</h2>
+          <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <i style="color: white;" class="fa fa-bars fa-2x"></i>
+          </button>
+        </div>
+
+
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+          <ul class="nav navbar-nav">
+
+            <li><a href="#section-2" du-smooth-scroll du-scrollspy>My</a></li>
+            <li><a href="#section-3" du-smooth-scroll du-scrollspy>Non</a></li>
+            <li><a href="#section-4" du-smooth-scroll du-scrollspy>Profit</a></li>
+            <li uib-dropdown="">
+              <a href="#" uib-dropdown-toggle="">About Us<b class="caret"></b></a>
+              <tree tree="tree"></tree>
+            </li>
+
+            <li>
+              <form action="" method="post">
+                <button type="submit" class="donateBtn btn btn-danger" name="button"><i class="fa fa-heart"></i> DONATE</button>
+              </form>
+            </li>
+
+          </ul
+        </div>
+      </nav>
+
+      <div class="row" fullpage-scroll="top">
+
+    	</div>
+
+    	<div id="section-2" class="row" fullpage-scroll="scroll">
+
+    		<div class="row first_segment">
+          <div class="col-md-8 col-md-offset-2 secTwoBack">
+            <div class="col-md-12">
+              <h1 class='heading'>My Non Profit</h1>
+              <p><i class="fa fa-ellipsis-h fa-5x"></i> </p>
+            </div>
+            <div class="col-md-7 col-md-offset-3">
+              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h3>
+              <button type="button" id="learn_more" ng-click="learn()" class="my_button"><b>Learn More</b></button>
+            </div>
+          </div>
+    		</div>
+
+        <div id="section-3" class="row second_segment">
+          <h1 class='heading'>Our Work</h1>
+          <p><i class="fa fa-ellipsis-h fa-5x"></i> </p>
+          <div class="col-md-8 col-md-offset-2">
+            <h3>Our activities include...</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          </div>
+          <div class="pics col-md-10 col-md-offset-1">
+            <ul class="dynamic-grid" angular-grid="pics" ag-gutter-size="5"  ag-refresh-on-img-load="true" >
+                <li data-ng-repeat="pic in pics.Contents" class="grid">
+                   <img ng-src="https://s3-us-west-1.amazonaws.com/BucketName/{{pic.Key}}" class="grid-img img-responsive">
+                </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="section-4" class="row third_segment">
+          <div class="col-md-10 col-md-offset-1">
+
+            <div class="col-md-12">
+              <h1 class="heading">Lorem ipsum!</h1>
+              <p><i class="fa fa-ellipsis-h fa-5x"></i> </p>
+              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            </div>
+
+            <!-- modal start -->
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="col-md-12 modal-header myModal">
+                    <h3 class="modal-title">Volunteer Form</h3>
+                </div>
+                <div class="row modal-body">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                      <label for="fName">First Name:</label>
+                      <input class="form-control" ng-model="volunteerForm.fName" type="text" name="fName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="lName">Last Name:</label>
+                      <input class="form-control" ng-model="volunteerForm.lName" type="text" name="lName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input class="form-control" ng-model="volunteerForm.email" type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone:</label>
+                      <input class="form-control" ng-model="volunteerForm.phone" type="text" name="phone" placeholder="xxx-xxx-xxxx">
+                    </div>
+                    <div class="form-group">
+                      <label for="about">Tell us about yourself!</label>
+                      <textarea class="form-control" ng-model="volunteerForm.about" name="about" rows="8" cols="40"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="myModal modal-footer col-md-12">
+                  <span ng-if='submitted'>
+                    <pre>Thanks! Your infomation has been saved!</pre>
+                    <button class="btn btn-danger" type="button" ng-click="cancel()">Close</button>
+                  </span>
+                  <button class="btn btn-primary" type="button" ng-click="newVol()">Submit</button>
+                </div>
+            </script>
+            <!-- modal end -->
+
+
+            <div class="third_content col-md-12">
+
+              <div class="col-md-4 box">
+                <img class='center' src="http://ronntorossianfoundation.com/wp-content/uploads/2016/02/non-profit-agency.jpg"/>
+                <button type="button" class='btn btn_third' ng-click="open('lg')">Volunteer</button>
+              </div>
+
+              <div class="col-md-4 box">
+                <img class='center' src="http://ronntorossianfoundation.com/wp-content/uploads/2016/02/non-profit-agency.jpg"/>
+                <form action="" method="post">
+                  <button type="submit" class='btn btn_third'><i class="fa fa-medkit"></i> DONATE</button>
+                </form>
+              </div>
+
+              <div class="col-md-4 box">
+                <img class='center' src="http://ronntorossianfoundation.com/wp-content/uploads/2016/02/non-profit-agency.jpg"/>
+                <button type="button" ng-click="learn()" class='btn btn_third'>Learn</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row fourth_segment">
+          <div class="col-md-12">
+            <h1 class="heading">Lorem ipsum dolor</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          </div>
+          <br>
+          <div class="form-inline col-md-6 col-md-offset-3">
+            <input id="mail_list" type="text" ng-model="emailList.email" name="mailing-list" class="form-control" placeholder="email">
+            <button type="button" ng-click="newEmail()" class="btn btn_mail">Register</button>
+            <div class="line"></div>
+            <p></p>
+            <div class="icons">
+              <a href=""><i class="fa fa-facebook-square fa-3x"></i></a>
+              <i class="fa fa-twitter-square fa-3x"></i>
+              <i class="fa fa-youtube-square fa-3x"></i>
+            </div>
+          </div>
+
+          <br><br><br>
+        </div>
+
+        <div class="row footer">
+          <div class="col-md-8 col-md-offset-2 ">
+            <i class="fa fa-copyright">2016 Necholas Gomez</i>
+          </div>
+        </div>
+
+    	</div>
+    </div>
+  </body>
+</html>
